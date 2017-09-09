@@ -187,28 +187,25 @@ body {
 .emojis {
 	position: absolute;
 	z-index: 2;
-	top: 150px;
-	left: 32px;
+	top: 148px;
+	left: 29px;
 }
 .emojis * {
-	height: 32px;
-	width: 32px;
-	padding: 0 12px 0 12px;
+	height: 30px;
+	width: 30px;
+	padding: 0 15px 0 15px;
 }
 .bar-space {
-  position: absolute;
-  /*display: inline-block;*/
-  width: 90%;
-  height: 75%;
-  left: 5%;
+	position: absolute;
+	width: 90%;
+	height: 75%;
+	left: 29px;
 }
 .bar-space * {
-	width: 20%;
-	padding: 0 12px 0 12px;
-}
-.bar {
-	width: 35px;
-	background-color: #000;
+	width: 30px;
+	display: inline-block;
+	margin: 0 15px 0 15px;
+	background-color: #f16065;
 }
 /* Personality details */
 .grid-space,
