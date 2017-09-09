@@ -34,13 +34,29 @@ document.onmouseup = updateInputTextarea;
 document.onkeyup = updateInputTextarea;
 
 
-// analyze button listener
-$('.analyze.button').addEventListener("click", function() {
+function updateGraphs() {
 	text = $('#input').value;
 	toneAnalyzer.request(text, foo.handleResponse, foo.displayErrorMessage);
+}
+
+
+$('.analyze.button').addEventListener("click", function() {
+	updateGraphs();
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
+	updateInputTextarea();
+	var selectedText = getSelectedText();
+	if (!selectedText) {
+		$('.instructions').style.visibility = "visible";
+		$('.emotion.page').style.display = "none";
+		$('.personality.page').style.display = "none";
+	} 
+	else {
+		$('.instructions').style.display = "none";
+		$('.emotion.page').style.visibility = "visible";
+		$('.personality.page').style.visibility = "visible";
+		updateGraphs();
+	}
 });
