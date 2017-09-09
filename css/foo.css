@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Rubik|Cabin|Quicksand');
 body {
 	font-family: 'Rubik', sans-serif;
 	margin: 0;
@@ -12,9 +12,10 @@ body {
 	height: 300px;
 
 	border: 1px solid #000;
-	
+
 	/*background-color: #e3f7f5;*/
-	background-color: #222325;
+	/*background-color: #222325;*/
+	background-color: #edefee;
 }
 .serious-center {
 	position: absolute;
@@ -66,8 +67,9 @@ body {
 
 	background-color: #fff;
 	color: #000;
+	border: 1px solid #d6d7db;
 	border-radius: 3px;
-	box-shadow: 0 4px #949494;
+	box-shadow: 0 4px #697989;
 
 	text-align: center;
 
@@ -104,40 +106,62 @@ body {
 .tab {
 	position: absolute;
 	width: calc(50% - 3px);
-	height: 13%;
+	height: 33px;
 
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.28);
 
 	z-index: 1;
 	
 	color: #f0f0f0;
 
 	cursor: pointer;
+
+	filter: brightness(0.7);
+	-webkit-filter: brightness(0.7);
 } .emotion.tab {
 	left: 0;
 	border-radius: 3px 3px 0 0;
+
+	background-color: #f16065;
 } .personality.tab {
 	right: 0;
 	border-radius: 3px 3px 0 0;
+
+	background-color: #04c4d3;
 } .page.active .tab {
+	filter: none;
+	-webkit-filter: none;
+
 	cursor: default;
+} .tab span {
+	position: absolute;
+	top: 50%;
+	left: 14px;
+	transform: translateY(-50%);
+
+	font-size: 15px;
+	font-family: 'Quicksand', sans-serif;
+	/*font-weight: bold;*/
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 .details {
 	position: absolute;
 	bottom: 0;
 	z-index: 1;
 	width: 100%;
-	height: 87%;
+	height: calc(100% - 33px); /*- tab height*/
+	visibility: hidden;
 
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.28);
 	border-radius: 0 0 3px 3px;
+
+	background-color: #ffffff;
 }
 /* active panels */
-.page * {
-	background-color: #292c31;
-} .page.active * {
-	background-color: #393e44;
-} .page.active .details {
+.page.active .details {
+	visibility: visible;
+
 	z-index: 2;
 }
 .instructions {
