@@ -9,6 +9,13 @@ class ToneAnalyzer {
 	}
 
 	request(text, callback, errorCallback){
+		// var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+		// var tone_analyzer = new ToneAnalyzerV3({
+		//   username: this.username,
+		//   password: this.password,
+		//   version_date: '2017-09-09'
+		// });
+
 		// call API
 	  var xhr = new XMLHttpRequest();
 	  xhr.open('GET', this.api_url);
@@ -27,6 +34,7 @@ class ToneAnalyzer {
 	  };
 
 	  xhr.send();
+	  console.log(xhr.response);
 	}
 
 	formatResponse() {

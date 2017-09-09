@@ -4,7 +4,11 @@ class Foo {
 
 	handleResponse(tonesDict) {
 		// show tabs
-
+		//document.getElementById("joy-bar").innerHTML = <rect x= y= width= height= />
+		//document.getElementById("anger-bar").innerHTML = <rect x= y= width= height= />
+		//document.getElementById("disgust-bar").innerHTML = <rect x= y= width= height= />
+		//document.getElementById("fear-bar").innerHTML = <rect x= y= width= height= />
+		//document.getElementById("sadness-bar").innerHTML = <rect x= y= width= height= />
 	};
 
 	switchTab(selector) {
@@ -38,7 +42,7 @@ class Foo {
 	};
 
 	updateGraphs() {
-		text = $('#input').value;
+		var text = $('#input').value;
 		toneAnalyzer.request(text, foo.handleResponse, foo.displayErrorMessage);
 	};
 }
