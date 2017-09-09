@@ -11,12 +11,16 @@ class Foo {
 			$(selector).css('height', `${value * range + start}px`);
 		};
 
+		// Takes in a big 5 class e.g. ".neuroticism"
 		function setScale(selector, value) {
 			let start = -2.2;
 			let end = 97.4;
 			let range = end - start;
 
-			$(selector).css('left', `${range * value + start}%`)
+			$(`${selector}.scale-space .tick`).css('left', `${range * value + start}%`)
+		};
+		function resetScales() {
+			$('.tick').css('left', '');
 		}
 
 		if (keys(tonesDict).length != 0){
