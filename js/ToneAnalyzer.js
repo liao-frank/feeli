@@ -10,9 +10,23 @@ class Tone_API {
 
 	request(text, callback, errorCallback){
 		// call API
-		// format response
-		// callback
-		// errorCallback
+	  var xhr = new XMLHttpRequest();
+	  xhr.open('GET', this.api_url);
+	  xhr.responseType = 'json';
+
+	  xhr.onload = function() {
+	    var response = xhr.response;
+	    if (response.status == 200) {
+	    	this.response = response
+		    callback(formatResponse());
+	  	};
+	  };
+
+	  xhr.onerror = function() {
+	    errorCallback(xhr.response.error);
+	  };
+
+	  xhr.send();
 	}
 
 	formatResponse() {
