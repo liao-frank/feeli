@@ -210,3 +210,28 @@ body {
 	width: 35px;
 	background-color: #000;
 }
+/* Personality details */
+.grid-space,
+.label-space,
+.scale-space {
+	position: relative;
+}
+.grid-space {
+	height: 150px;
+	width: 200px;
+}
+.label-space,
+.scale-space, {
+	height: 20%;
+
+	display: inline-block;
+} .label-space *,
+.scale-space * {
+	position: absolute;
+}
+.label-space {
+	width: 25%;
+}
+.scale-space {
+	width: 50%;
+}
