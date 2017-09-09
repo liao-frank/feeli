@@ -12,7 +12,7 @@ body {
 	height: 300px;
 
 	border: 1px solid #000;
-
+	
 	/*background-color: #e3f7f5;*/
 	background-color: #222325;
 }
@@ -109,6 +109,8 @@ body {
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
 
 	z-index: 1;
+	
+	color: #f0f0f0;
 
 	cursor: pointer;
 } .emotion.tab {
@@ -142,4 +144,26 @@ body {
 	visibility: hidden;
 } .instructions.active {
 	visibility: visible;
+}
+/* bar graph */
+.svg-space {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.horizontal-line {
+	stroke: #4ed8da;
+	stroke-width: 2;
+}
+.emojis {
+	position: absolute;
+	z-index: 2;
+	top: 150px;
+	left: 20px;
+}
+.emojis * {
+	height: 32px;
+	width: 32px;
+	padding: 0 12px 0 12px;
 }
