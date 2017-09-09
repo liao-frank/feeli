@@ -27,3 +27,18 @@ $(document).ready(function() {
 		foo.switchTab('.personality');
 	});
 });
+
+$(window).on('load', function() {
+	function setHeight(selector, value) {
+		let start = 5;
+		let end = 100;
+		let range = end - start;
+		$(selector).css('height', `${value * range + start}px`);
+	};
+
+	setHeight('.joy.bar', 1);
+	setHeight('.anger.bar', 1);
+	setHeight('.disgust.bar', 0.5);
+	setHeight('.fear.bar', 0.2);
+	setHeight('.sadness.bar', 0);
+});
