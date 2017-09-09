@@ -17,7 +17,7 @@ class Foo {
 		setHeight('.sadness.bar', sadnessHeight);
 	};
 
-	function setHeight(selector, value) {
+	setHeight(selector, value) {
   		$(selector).css('height', `${value * 100}px`);
 	};
 
