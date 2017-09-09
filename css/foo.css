@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+body {
+	width: 400px;
+	height: 300px;
+
+	border: 1px solid #000;
+	font-family: 'Arial', sans-serif;
+}
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.textbar {
+	width: calc(100% - 28px);
+	height: calc(20% - 21px);
+
+	margin: 15px;
+	margin-bottom: 7px;
+}
+.textbar #input {
+	float: left;
+
+	border-radius: 3px;
+	width: calc(70% - 7px);
+	height: 100%;
+	margin: 0;
+	margin-right: 7px;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.textbar .button {
+	float: left;
+
+	width: calc(30% - 7px);
+	height: 100%;
+	margin: 0;
+	margin-left: 7px;
+
+	text-align: center;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.content {
+	position: relative;
+
+	width: 100%;
+	height: 80%; /*+ textbar == 100*/
+}
+.instructions,
+.page {
+	position: absolute;
+	bottom: 0;
+	/*visibility: hidden;*/
+
+	width: calc(100% - 28px);
+	height: calc(100% - 21px);
+
+	margin: 14px;
+	margin-top: 7px;
+} 
+.tab {
+	position: absolute;
+	width: 50%;
+	height: 20%;
+
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+	border-radius: 3px;
+
+	z-index: 0;
+} .emotion.tab {
+	left: 0;
+} .personality.tab {
+	right: 0;
+}
+.details {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	height: 80%;
+
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+	border-radius: 3px;
+}
+/* active panels */
+.page * {
+	background-color: #dadada;
+	z-index: -1;
+} .page.active * {
+	background-color: #f2f2f2;
+	z-index: 0;
+}
+.instructions {
+	visibility: hidden;
+} .instructions.active {
+	visibility: visible;
+}
