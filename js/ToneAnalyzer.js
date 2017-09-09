@@ -1,5 +1,5 @@
 
-class Tone_API {
+class ToneAnalyzer {
 
 	constructor(api_url, username, password) {
 		this.response = JSON.stringify({});
@@ -17,7 +17,7 @@ class Tone_API {
 	  xhr.onload = function() {
 	    var response = xhr.response;
 	    if (response.status == 200) {
-	    	this.response = response
+	    	this.response = response;
 		    callback(formatResponse());
 	  	};
 	  };
