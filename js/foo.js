@@ -4,21 +4,21 @@ class Foo {
 
 	handleResponse(tonesDict) {
 		//show tabs
-		var joyHeight = tonesDict[emotion_tone][Joy];
-		var angerHeight = tonesDict[emotion_tone][Anger];
-		var disgustHeight = tonesDict[emotion_tone][Disgust];
-		var fearHeight = tonesDict[emotion_tone][Fear];
-		var sadnessHeight = tonesDict[emotion_tone][Sadness];
+		var joyHeight = tonesDict["emotion_tone"]["Joy"];
+		var angerHeight = tonesDict["emotion_tone"]["Anger"];
+		var disgustHeight = tonesDict["emotion_tone"]["Disgust"];
+		var fearHeight = tonesDict["emotion_tone"]["Fear"];
+		var sadnessHeight = tonesDict["emotion_tone"]["Sadness"];
+
+		function 	setHeight(selector, value) {
+			$(selector).css('height', `${value * 100}px`);
+		};
 
 		setHeight('.joy.bar', joyHeight);
 		setHeight('.anger.bar', angerHeight);
 		setHeight('.disgust.bar', disgustHeight);
 		setHeight('.fear.bar', fearHeight);
 		setHeight('.sadness.bar', sadnessHeight);
-	};
-
-	setHeight(selector, value) {
-  		$(selector).css('height', `${value * 100}px`);
 	};
 
 	switchTab(selector) {
