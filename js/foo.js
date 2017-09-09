@@ -37,12 +37,7 @@ class Foo {
 	  var selectedText = getSelectedText();
 	  if (selectedText) {
 	  	// update text box with selected text
-	  	$('#input').value = selectedText;
+	  	$('#input').val(selectedText);
 	  }
-	};
-
-	updateGraphs() {
-		var text = $('#input').value;
-		toneAnalyzer.request(text, foo.handleResponse, foo.displayErrorMessage);
 	};
 }
