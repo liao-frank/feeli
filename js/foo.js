@@ -10,7 +10,10 @@ class Foo {
 			let range = end - start;
 			$(selector).css('height', `${value * range + start}px`);
 		};
-
+		function resetHeights() {
+			let start = 5;
+			$('.bar').css('height', `${start}px`);
+		};
 		// Takes in a big 5 class e.g. ".neuroticism"
 		function setScale(selector, value) {
 			let start = -2.2;
@@ -19,9 +22,10 @@ class Foo {
 
 			$(`${selector}.scale-space .tick`).css('left', `${range * value + start}%`)
 		};
+
 		function resetScales() {
 			$('.tick').css('left', '');
-		}
+		};
 
 		if (keys(tonesDict).length != 0){
 
