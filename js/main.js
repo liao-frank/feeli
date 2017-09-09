@@ -28,6 +28,7 @@ $(document).ready(function() {
 	$('.personality.tab').click(function() {
 		foo.switchTab('.personality');
 	});
+
 });
 
 $(window).on('load', function() {

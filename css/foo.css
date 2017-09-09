@@ -195,6 +195,7 @@ body {
 	margin: 0 5%;
 } .emojis .emoji-space {
 	float: left;
+	position: relative;
 	width: 20%;
 	height: 100%;
 } .emojis .emoji-space .emoji-image {
@@ -204,6 +205,20 @@ body {
 
 	background-size: contain;
 	background-repeat: no-repeat;
+} .emojis .emoji-space .emoji-tooltip {
+	position: absolute;
+	top: -10px; left: -10px;
+	visibility: hidden;
+
+	padding: 2px 7px;
+	border: 1px solid #8a8a8a;
+	border-radius: 3px;
+	color: #697989;
+	box-shadow: 2px 2px 3px;
+	font-family: 'Quicksand', sans-serif;
+	background-color: #fff;
+} .emoji-space:hover .emoji-tooltip {
+	visibility: visible;
 }
 
 .bar-grid-space {
@@ -329,6 +344,24 @@ body {
 }
 
 .footer {
+	position: absolute;
+	right: 14px;
+	bottom: 1px;
+
 	color: #697989;
-	
+	/*text-transform: uppercase;*/
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	letter-spacing: 1px;
+} .footer .icon {
+	background-image: url(../images/logo.png);
+	background-size: contain;
+
+	width: 16px;
+	height: 16px;
+} .footer .copyright {
+	position: relative;
+	bottom: 4px;
+} .footer * {
+	display: inline-block;
 }
