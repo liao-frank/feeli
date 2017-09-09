@@ -27,7 +27,7 @@ class Foo {
 			$('.tick').css('left', '');
 		};
 
-		if (keys(tonesDict).length != 0){
+		if (Object.keys(tonesDict).length != 0){
 
 			var joyHeight = tonesDict["emotion_tone"]["Joy"];
 			var angerHeight = tonesDict["emotion_tone"]["Anger"];
