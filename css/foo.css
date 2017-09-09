@@ -175,9 +175,12 @@ body {
 }
 /* bar graph */
 .chart-base {
-	height: 100%;
+	position: absolute;
+	top: 0;
+
 	width: 100%;
-	position: relative;
+	height: 100%;
+	
 	text-align: center;
 }
 .horizontal-line {
@@ -185,28 +188,52 @@ body {
 	stroke-width: 2;
 }
 .emojis {
-	position: absolute;
-	z-index: 2;
-	top: 148px;
-	left: 29px;
+	position: relative;
+	width: 90%;
+	height: 25%;
+
+	margin: 0 5%;
+} .emojis .emoji-space {
+	float: left;
+	width: 20%;
+	height: 100%;
+} .emojis .emoji-space .emoji-image {
+	width: 45%;
+	height: 80%;
+	margin: 10% 27.5% 0% 27.5%;
+
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.emojis * {
-	height: 30px;
-	width: 30px;
-	padding: 0 15px 0 15px;
-}
-.bar-space {
-	position: absolute;
+
+.bar-grid-space {
+	position: relative;
 	width: 90%;
 	height: 75%;
-	left: 29px;
+
+	margin: 0 5%;
 }
-.bar-space * {
-	width: 30px;
+.bar-grid-space .bar-space {
+	position: relative;
+	width: 10%;
+	height: 100%;
+	margin: 0 5%;
+
 	display: inline-block;
-	margin: 0 15px 0 15px;
+	
+} .bar-grid-space .bar-space .bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
 	background-color: #f16065;
+
+	border-radius: 3px 3px 0 0;
+	/*box-shadow: 1px -1px 5px rgba(0,0,0,0.28);*/
 }
+
 /* Personality details */
 .grid-space,
 .label-space,
