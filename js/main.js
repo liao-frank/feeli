@@ -19,4 +19,10 @@ $(document).ready(function() {
 	$('.personality.tab').click(function() {
 		foo.switchTab('.personality');
 	});
+
+	//document.getElementById("joy-bar").innerHTML = <rect x= y= width= height= />
+	//document.getElementById("anger-bar").innerHTML = <rect x= y= width= height= />
+	//document.getElementById("disgust-bar").innerHTML = <rect x= y= width= height= />
+	//document.getElementById("fear-bar").innerHTML = <rect x= y= width= height= />
+	//document.getElementById("sadness-bar").innerHTML = <rect x= y= width= height= />
 });
