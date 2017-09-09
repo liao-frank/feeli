@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 body {
-	font-family: 'Arial', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	margin: 0;
+
+	background-color: #222325;
+	color: #fff;
 }
 .wrapper {
 	position: relative;
@@ -10,7 +13,8 @@ body {
 
 	border: 1px solid #000;
 
-	background-color: #e3f7f5;
+	/*background-color: #e3f7f5;*/
+	background-color: #222325;
 }
 .serious-center {
 	position: absolute;
@@ -48,6 +52,8 @@ body {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+} .textbar #input:focus {
+	outline: none;i
 }
 .textbar .button {
 	position: relative;
@@ -59,6 +65,7 @@ body {
 	margin-left: 7px;
 
 	background-color: #fff;
+	color: #000;
 	border-radius: 3px;
 	box-shadow: 0 4px #949494;
 
@@ -97,9 +104,9 @@ body {
 .tab {
 	position: absolute;
 	width: calc(50% - 3px);
-	height: 15%;
+	height: 13%;
 
-	/*box-shadow: 2px 2px 3px rgba(0,0,0,0.28);*/
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
 
 	z-index: 1;
 
@@ -118,16 +125,16 @@ body {
 	bottom: 0;
 	z-index: 1;
 	width: 100%;
-	height: 85%;
+	height: 87%;
 
-	/*box-shadow: 2px 2px 3px rgba(0,0,0,0.28);*/
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
 	border-radius: 0 0 3px 3px;
 }
 /* active panels */
 .page * {
-	background-color: #f2f2f2;
+	background-color: #292c31;
 } .page.active * {
-	background-color: #fff;
+	background-color: #393e44;
 } .page.active .details {
 	z-index: 2;
 }
