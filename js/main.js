@@ -34,4 +34,5 @@ $(document).ready(function() {
 $(window).on('load', function() {
 	foo.resetHeights();
 	foo.resetScales();
+	makeRequest();
 });
