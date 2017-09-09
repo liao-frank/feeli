@@ -67,6 +67,10 @@ body {
 
 	background-color: #fff;
 	color: #000;
+	font-family: 'Quicksand', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
 	border: 1px solid #d6d7db;
 	border-radius: 3px;
 	box-shadow: 0 4px #697989;
