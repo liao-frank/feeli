@@ -3,12 +3,22 @@ class Foo {
 	constructor() {}
 
 	handleResponse(tonesDict) {
-		// show tabs
-		//document.getElementById("joy-bar").innerHTML = <rect x= y= width= height= />
-		//document.getElementById("anger-bar").innerHTML = <rect x= y= width= height= />
-		//document.getElementById("disgust-bar").innerHTML = <rect x= y= width= height= />
-		//document.getElementById("fear-bar").innerHTML = <rect x= y= width= height= />
-		//document.getElementById("sadness-bar").innerHTML = <rect x= y= width= height= />
+		//show tabs
+		var joyHeight = tonesDict[emotion_tone][Joy];
+		var angerHeight = tonesDict[emotion_tone][Anger];
+		var disgustHeight = tonesDict[emotion_tone][Disgust];
+		var fearHeight = tonesDict[emotion_tone][Fear];
+		var sadnessHeight = tonesDict[emotion_tone][Sadness];
+
+		setHeight('.joy.bar', joyHeight);
+		setHeight('.anger.bar', angerHeight);
+		setHeight('.disgust.bar', disgustHeight);
+		setHeight('.fear.bar', fearHeight);
+		setHeight('.sadness.bar', sadnessHeight);
+	};
+
+	setHeight(selector, value) {
+  		$(selector).css('height', `${value * 100}px`);
 	};
 
 	switchTab(selector) {
