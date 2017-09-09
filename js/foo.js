@@ -9,7 +9,7 @@ class Foo {
 		};
 
 		if (keys(tonesDict).length != 0){
-			
+
 			var joyHeight = tonesDict["emotion_tone"]["Joy"];
 			var angerHeight = tonesDict["emotion_tone"]["Anger"];
 			var disgustHeight = tonesDict["emotion_tone"]["Disgust"];
@@ -37,11 +37,16 @@ class Foo {
 	// https://stackoverflow.com/questions/4712310/javascript-how-to-detect-if-a-word-is-highlighted
 	getSelectedText() {
 	  var text = "";
-	  if (typeof window.getSelection != "undefined") {
-	    text = window.getSelection().toString();
-	  } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
-	    text = document.selection.createRange().text;
-	  }
+	  // if (typeof window.getSelection != "undefined") {
+	  //   text = window.getSelection().toString();
+	  // } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+	  //   text = document.selection.createRange().text;
+	  // }
+	  chrome.tabs.executeScript( {
+		  code: "window.getSelection().toString();"
+		}, function(selection) {
+		  text = selection[0];
+		});
 	  return text;
 	};
 

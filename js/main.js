@@ -13,6 +13,8 @@ function makeRequest() {
 };
 
 $(document).ready(function() {
+	foo.updateInputTextarea();
+	
 	$('.analyze.button').click(function() {
 		makeRequest();
 	});
