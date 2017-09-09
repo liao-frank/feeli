@@ -44,6 +44,14 @@ $('.analyze.button').addEventListener("click", function() {
 	updateGraphs();
 });
 
+// tabs
+$('.emotion.tab').addEventListener("click", function() {
+	foo.switchTab('Emotion');
+});
+$('.personality.tab').addEventListener("click", function() {
+	foo.switchTab('Personality');
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
 	updateInputTextarea();
