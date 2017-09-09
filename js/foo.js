@@ -4,9 +4,20 @@ class Foo {
 
 	handleResponse(tonesDict) {
 
-		function 	setHeight(selector, value) {
-			$(selector).css('height', `${value * 100}px`);
+		function setHeight(selector, value) {
+			let start = 5;
+			let end = 100;
+			let range = end - start;
+			$(selector).css('height', `${value * range + start}px`);
 		};
+
+		function setScale(selector, value) {
+			let start = -2.2;
+			let end = 97.4;
+			let range = end - start;
+
+			$(selector).css('left', `${range * value + start}%`)
+		}
 
 		if (keys(tonesDict).length != 0){
 
