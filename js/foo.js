@@ -53,27 +53,11 @@ class Foo {
 		$('.errorMessage').style.visibility = "visible";
 	};
 
-	// https://stackoverflow.com/questions/4712310/javascript-how-to-detect-if-a-word-is-highlighted
-	getSelectedText() {
-	  var text = "hello";
-	  if (typeof window.getSelection != "undefined") {
-	    text = window.getSelection().toString();
-	  } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
-	    text = document.selection.createRange().text;
-	  }
-	 //  chrome.tabs.executeScript( {
-		//   code: "window.getSelection().toString();"
-		// }, function(selection) {
-		//   text = selection[0];
-		// });
-	  return text;
-	};
-
 	updateInputTextarea() {
-	  var selectedText = getSelectedText();
-	  if (selectedText) {
-	  	// update text box with selected text
-	  	$('#input').val(selectedText);
-	  }
+	  chrome.tabs.executeScript( {
+		  code: "window.getSelection().toString();"
+		}, function(selection) {
+		  $("#input").val(selection[0]);
+		});
 	};
 }
